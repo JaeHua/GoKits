@@ -12,10 +12,7 @@ go-kits
 ├── frontend // Vue前端代码
 │   ├── public
 |   └── src
-├── common // 通用组件和模块
 ├── .dockerignore
-├── Dockerfile
-├── docker-compose.yml
 └── README.md
 ```
 
@@ -29,7 +26,7 @@ go-kits
 - Redis 缓存
 - Logger 日志
 - Validator 验证
-
+- so on
 ## 前端技术 
 
 - Vue3
@@ -39,11 +36,11 @@ go-kits
 - Axios 网络请求
 - Pinia 状态管理
 - Vue Router 路由
+- so on
 
 ## 部署方式
 
 - Docker 镜像化
-- Docker Compose 多容器
 - Nginx 代理
 - Linux 发布正式版
 
