@@ -50,16 +50,125 @@ go-kits
 - Nginx 代理
 - Linux 发布正式版
 
+
 ## 使用说明
 
-克隆项目,配置文件,在 IDE 运行`docker-compose up`启动开发环境。
+克隆项目,配置文件然后启动docker容器
+### Mysql
 
-## 项目亮点
 
-- 前后端分离架构
-- Docker 一键运行
-- 自动化测试与持续集成
-- 业务通用抽象
-- 好的代码结构与组织
 
-期待您的Star!
+- 拉取镜像（版本5.7）
+
+```Bash
+docker pull mysql:5.7
+```
+
+- 创建对应文件夹
+
+```Bash
+mkdir -p /home/mysql/conf
+mkdir -p /home/mysql/data
+```
+
+- 授权文件夹
+
+```Bash
+chmod 777 /home/mysql/conf
+chmod 777 /home/mysql/data
+```
+
+- 运行容器
+
+```Bash
+docker run -d -p 3310:3306 -v /home/mysql/conf:/etc/mysql/conf.d/ -v /home/mysql/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 --name mysql_gokits
+```
+## Redis部署
+
+- 拉取镜像(版本7.0)
+
+```Bash
+docker pull redis:7.0
+```
+
+- 创建对应文件夹
+
+```Bash
+mkdir -p /usr/local/docker/redis/conf
+mkdir -p /usr/local/docker/redis/data
+```
+
+- 授权文件夹
+
+```Bash
+chmod 777 /usr/local/docker/redis/conf
+chmod 777 /usr/local/docker/redis/data
+```
+
+- 运行容器
+
+```Bash
+docker run \
+    -d \
+    -p 6379:6379 \
+    --name redis_gokits \
+    --restart=always \
+    -v /usr/local/docker/redis/data:/data \
+    -v /usr/local/docker/redis/conf/redis.conf:/etc/redis \
+    redis
+```
+
+## Vue部署
+
+- 打包成dist
+
+```Bash
+npm build
+```
+
+- 创建对应文件夹
+
+```Bash
+mkdir /usr/local/dockernginxdist
+```
+
+- 授权文件夹
+
+```Bash
+chmod 777 /usr/local/dockernginxdist
+```
+
+- 构建镜像
+
+```Bash
+docker build -t vue_gokits .
+```
+
+- 运行容器
+
+```Bash
+docker run -p 3300:3300 -d vue_gokits
+```
+
+## Gin部署
+
+- 创建对应文件夹(代码打包放在这)
+
+```Bash
+mkdir /home/gokits/
+```
+
+- 构建镜像
+
+```Bash
+docker build -t gokits:1.0 .
+```
+
+- 运行容器
+
+```Bash
+docker run -d -p 3344:3344 --name gin_gokits gokits:1.0
+```
+
+
+
