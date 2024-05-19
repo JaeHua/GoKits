@@ -2,6 +2,9 @@
 
 GoKits是一个基于Golang和Vue的全栈项目模板,前端采用Vue3+Tailwindcss+ElementPlus开发,后端使用Gin框架开发。整个项目包含前后端代码,抽取出通用的功能模块和组件,并通过Docker实现持续集成和部署。
 
+![jojocat](https://github.com/JaeHua/GoKits/assets/126366914/13071d1a-8574-4f22-84ee-51060e30b1ca)
+
+
 ## 项目结构
 
 ```
