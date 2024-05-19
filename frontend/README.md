@@ -52,7 +52,7 @@
   ```
   http://your_serve_ip:port
   ```
-
+记得修改 ``` nginx.conf ```中的port
 ## 开发规范
 
 - 使用Vite优化构建
