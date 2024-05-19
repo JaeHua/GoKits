@@ -12,12 +12,28 @@ GoKits是一个基于Golang和Vue的全栈项目模板,前端采用Vue3+Tailwind
 
 ```
 go-kits
-├── backend  // Go后端代码
-│   └── main.go
-│   └── route.go
-├── frontend // Vue前端代码
-│   ├── public
-|   └── src
+├─backend
+│  ├─common
+│  ├─config
+│  ├─controller
+│  ├─dto
+│  ├─middleware
+│  ├─model
+│  ├─response
+│  └─util
+└─frontend
+│    ├─public
+│    └─src
+│        ├─assets
+│        ├─components
+│        │  └─icons
+│        ├─router
+│        ├─service
+│        ├─store
+│        │  └─module
+│        ├─utils
+│        └─views
+│            └─layout
 └── README.md
 ```
 
