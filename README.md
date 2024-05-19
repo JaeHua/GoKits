@@ -45,7 +45,6 @@ go-kits
 - JWT 鉴权
 - Mysql 数据库
 - Redis 缓存
-- Logger 日志
 - Validator 验证
 - so on
 ## 前端技术 
@@ -55,7 +54,7 @@ go-kits
 - Tailwind CSS
 - Element Plus
 - Axios 网络请求
-- Pinia 状态管理
+- Vuex 状态管理
 - Vue Router 路由
 - so on
 
@@ -69,6 +68,12 @@ go-kits
 ## 使用说明
 
 克隆项目,配置文件然后启动docker容器
+
+## 在线体验
+
+http://47.115.213.254:3300/
+
+
 ### Mysql
 
 
@@ -202,4 +207,9 @@ docker run -d -p 3344:3344 --name gin_gokits gokits:1.0
 ## Mysql管理
 
 推荐使用**DBeaver**，开源免费工具
+
+## VPS推荐
+
+推荐https://www.hostyun.com/  **便宜够用**
+
 
