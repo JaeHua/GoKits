@@ -1,16 +1,16 @@
 server:
-  port: 3344
+  port: your_port1
 datasource:
   driverName: mysql
-  host: 47.115.213.254
-  port: 3310
-  database: ginvue
+  host: your_server_ip
+  port: your_port2
+  database: your_database
   username: root
-  password: 123456
+  password: password
   charset: utf8
 
 redis:
-  host: 47.115.213.254
-  port: 6379
+  host: your_server_ip
+  port: your_port3
   auth:
 
