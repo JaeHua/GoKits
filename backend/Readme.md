@@ -51,7 +51,7 @@ src
 
 ## 运行示例
 
-* ** 克隆项目后,自行配置`.env`文件,运行:**
+* **克隆项目后,自行配置`.env`文件,运行:**
 
 ```
 go build
@@ -59,7 +59,7 @@ go build
 ```
 访问:http://localhost:port
 
-* ** 利用docker运行**
+* **利用docker运行**
 
 
 ```
