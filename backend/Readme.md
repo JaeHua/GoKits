@@ -51,13 +51,15 @@ src
 
 ## 运行示例
 
-* 克隆项目后,自行配置`.env`文件,运行:
+* ** 克隆项目后,自行配置`.env`文件,运行:**
 
 ```
 go build
 ./your_app_name
 ```
-* 利用docker运行
+访问:http://localhost:port
+
+* ** 利用docker运行**
 
 
 ```
@@ -65,9 +67,74 @@ docker build -t gokits:1.0
 docker run -d -p port1:port2 --name gin_gokits gokits:1.0
 ```
 
-访问:http://localhost:port
+
+
+## 涉及部分
+
+### Jwt
+
+用于Web token
+
+官网:https://jwt.p2hp.com/introduction
+
+JWT代码仓库:https://github.com/dgrijalva/jwt-go
+
+拉取:
+
+```go get github.com/dgrijalva/jwt-go```
+
+
+### Viper
+用于配置文件的读取管理等
+
+代码仓库:https://github.com/spf13/viper
+
+拉取:
+
+```go get github.com/spf13/viper```
+
+### Gorm
+把struct类型和数据库表记录进行映射，操作数据库的时候不需要直接手写Sql代码
+
+代码仓库:https://github.com/go-gorm/gorm
+
+拉取:
+
+```go get -u github.com/jinzhu/gorm```
+
+### Gin
+
+流行的goweb框架
+
+代码仓库:https://github.com/gin-gonic/gin
+
+拉取:
+
+```go get -u github.com/gin-gonic/gin```
+
+### Mysql驱动
+
+go中mysql驱动
+
+代码仓库:https://github.com/go-sql-driver/mysql
+
+拉取:
+
+```go get github.com/go-sql-driver/mysql```
+
+### Postman
+
+接口测试工具
+
+官网:https://www.postman.com/
+
 
 ## 使用备忘
 
 本项目是个人学习使用的简单 Golang Web 项目模板,目的是快速上手 Golang Web 开发。
 项目结构及代码设计上还有许多不足,欢迎大家提出宝贵意见。
+
+## 参考:
+
+[https://www.bilibili.com/video/BV1Rg411u7xH/](https://www.bilibili.com/video/BV1CE411H7bQ/?spm_id_from=333.337.search-card.all.click)
+
