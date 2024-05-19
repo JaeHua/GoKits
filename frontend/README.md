@@ -1,29 +1,63 @@
-# demo
+# Vue3 + Tailwind CSS + Element Plus GoKits
 
-This template should help get you started developing with Vue 3 in Vite.
+## 项目运行
 
-## Recommended IDE Setup
+- 开发环境:
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+  ```
+  npm install
+  npm run dev
+  ```
 
-## Customize configuration
+- 生产环境:
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+  ```
+  npm build
+  ```
 
-## Project Setup
+## Vue部署
 
-```sh
-npm install
-```
+- 构建dist文件夹
 
-### Compile and Hot-Reload for Development
+  ```
+  npm build
+  ```
 
-```sh
-npm run dev
-```
+- 创建nginx文件挂载文件夹
 
-### Compile and Minify for Production
+  ```
+  mkdir /usr/local/dockernginxdist
+  ```
 
-```sh
-npm run build
-```
+- 授权文件夹
+
+  ```
+  chmod 777 /usr/local/dockernginxdist
+  ```
+
+- 构建Docker镜像
+
+  ```
+  docker build -t vue_app . 
+  ```
+
+- 运行容器
+
+  ```
+  docker run -d -p 8088:80 vue_app
+  ```
+
+- 访问
+
+  ```
+  http://your_serve_ip:port
+  ```
+
+## 开发规范
+
+- 使用Vite优化构建
+- Docker镜像本地部署
+- 测试和发布环境部署
+
+
+项目使用Vue+Tailwind+Element搭建,采用Docker一键部署上线。
