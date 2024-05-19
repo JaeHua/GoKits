@@ -177,4 +177,14 @@ docker run -d -p 3344:3344 --name gin_gokits gokits:1.0
 ![image](https://github.com/JaeHua/GoKits/assets/126366914/1bcaaa56-e4a1-42a6-bd45-a2984ac7a7d5)
 
 
+## Redis管理
+
+推荐使用**RedisDesktopManager** ,开源免费的轻巧工具
+![image](https://github.com/JaeHua/GoKits/assets/126366914/94845abd-b4a6-46b4-b0a4-c6fc062ca00a)
+
+下载链接：https://github.com/RedisInsight/RedisDesktopManager/releases
+
+## Mysql管理
+
+推荐使用**DBeaver**，开源免费工具
 
