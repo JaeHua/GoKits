@@ -18,7 +18,6 @@ go-kits
 ├── frontend // Vue前端代码
 │   ├── public
 |   └── src
-├── .dockerignore
 └── README.md
 ```
 
