@@ -170,5 +170,11 @@ docker build -t gokits:1.0 .
 docker run -d -p 3344:3344 --name gin_gokits gokits:1.0
 ```
 
+## 容器监测
+
+利用**portainer**这个工具监控我们docker的运行状况
+
+![image](https://github.com/JaeHua/GoKits/assets/126366914/1bcaaa56-e4a1-42a6-bd45-a2984ac7a7d5)
+
 
 
