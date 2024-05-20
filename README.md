@@ -71,7 +71,8 @@ go-kits
 
 ## 在线体验
 
-[http://47.115.213.254:3300/](http://www.xiaocr.fun:3300/)
+http://www.xiaocr.fun:3300/
+---
 
 
 ## Mysql
