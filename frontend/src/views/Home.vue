@@ -1,124 +1,94 @@
 <template>
 
+  <main class="container mx-auto px-4 py-12 md:px-6 lg:py-16">
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <div @click="handleClick" class="flex flex-col items-center justify-center space-y-4 rounded-lg bg-[#f8f5f2] p-6 shadow-lg transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="h-10 w-10 text-[#d4b8a3]"
+        >
+          <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path>
+          <path d="M9 18c-4.51 2-5-2-7-2"></path>
+        </svg>
+        <h3 class="text-xl font-semibold">Github</h3>
+        <p class="text-sm text-gray-500">赞一个star吧⭐</p>
+      </div>
+      <div @click="$router.replace('todolist')" class="flex flex-col items-center justify-center space-y-4 rounded-lg bg-[#f8f5f2] p-6 shadow-lg transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="h-10 w-10 text-[#d4b8a3]"
+        >
+          <rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect>
+          <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+        </svg>
+        <h3 class="text-xl font-semibold">To-Do List</h3>
+        <p class="text-sm text-gray-500">Stay organized and on top of your tasks with our simple to-do list.</p>
+      </div>
+      <div class="flex flex-col items-center justify-center space-y-4 rounded-lg bg-[#f8f5f2] p-6 shadow-lg transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="h-10 w-10 text-[#d4b8a3]"
+        >
+          <circle cx="12" cy="12" r="10"></circle>
+          <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+          <line x1="9" x2="9.01" y1="9" y2="9"></line>
+          <line x1="15" x2="15.01" y1="9" y2="9"></line>
+        </svg>
+        <h3 class="text-xl font-semibold">Daily Mood Tracker</h3>
+        <p class="text-sm text-gray-500">Monitor your daily mood and emotions with our intuitive tracker.</p>
+      </div>
+      <div class="flex flex-col items-center justify-center space-y-4 rounded-lg bg-[#f8f5f2] p-6 shadow-lg transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="h-10 w-10 text-[#d4b8a3]"
+        >
+          <path d="M8 2v4"></path>
+          <path d="M16 2v4"></path>
+          <rect width="18" height="18" x="3" y="4" rx="2"></rect>
+          <path d="M3 10h18"></path>
+        </svg>
+        <h3 class="text-xl font-semibold">敬请期待</h3>
+        <p class="text-sm text-gray-500">please looking forward to.</p>
+      </div>
 
-  <div class="text-blue-400 text-4xl font-bold animate-pulse flex justify-center mt-1">Powerful Tools</div>
-  <main class="w-full max-w-6xl mx-auto px-4 py-12 md:px-6 md:py-16 lg:py-12 mt-0">
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-
-      <a href="#">
-        <div class="group relative rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-          <div class="aspect-w-16 aspect-h-9">
-            <img
-                src="@/assets/github.png"
-                width="600"
-                height="338"
-                alt="Calendar Preview"
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                style="aspect-ratio: 600 / 338; object-fit: cover;"
-            />
-          </div>
-          <div class="p-4 bg-[#F0FEFF] dark:bg-[#0E7490]">
-            <h2 class="text-lg font-semibold text-[#0C4A6E] dark:text-[#BEF8FD] mb-2">Github</h2>
-            <p class="text-[#164E63] dark:text-[#A5F3FC] mb-4">
-              赞一个star吧⭐
-            </p>
-            <div @click="handleClick" class="inline-flex items-center text-[#0284C7] hover:text-[#0369A1] dark:text-[#06B6D4] dark:hover:text-[#0891B2] transition-colors duration-300">
-              Learn more
-              <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="ml-1 w-4 h-4"
-              >
-                <path d="M5 12h14"></path>
-                <path d="m12 5 7 7-7 7"></path>
-              </svg>
-            </div>
-          </div>
-        </div>
-      </a>
-      <a href="#">
-        <div class="group relative rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-          <div class="aspect-w-16 aspect-h-9">
-            <img
-                src="@/assets/todolist.png"
-                width="600"
-                height="338"
-                alt="Notes Preview"
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                style="aspect-ratio: 600 / 338; object-fit: cover;"
-            />
-          </div>
-          <div class="p-4 bg-[#FEF9C3] dark:bg-[#A16207]">
-            <h2 class="text-lg font-semibold text-[#713F12] dark:text-[#FEFCE8] mb-2">Todolist</h2>
-            <p class="text-[#92400E] dark:text-[#FDE68A] mb-4">
-              What's to plan?.
-            </p>
-            <div @click="$router.replace('todolist')" class="inline-flex items-center text-[#A16207] hover:text-[#C2410C] dark:text-[#FBBF24] dark:hover:text-[#F59E0B] transition-colors duration-300">
-              Learn more
-              <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="ml-1 w-4 h-4"
-              >
-                <path d="M5 12h14"></path>
-                <path d="m12 5 7 7-7 7"></path>
-              </svg>
-            </div>
-          </div>
-        </div>
-      </a>
-      <a href="#">
-        <div class="group relative rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-          <div class="aspect-w-16 aspect-h-9">
-            <img
-                src="@/assets/more.png"
-                width="600"
-                height="338"
-                alt="Chat Preview"
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                style="aspect-ratio: 600 / 338; object-fit: cover;"
-            />
-          </div>
-          <div class="p-4 bg-[#E5E7EB] dark:bg-[#1E293B]">
-            <h2 class="text-lg font-semibold text-[#374151] dark:text-[#F3F4F6] mb-2">More</h2>
-            <p class="text-[#6B7280] dark:text-[#94A3B8] mb-4">
-             敬请期待!
-            </p>
-            <div class="inline-flex items-center text-[#6366F1] hover:text-[#4F46E5] dark:text-[#818CF8] dark:hover:text-[#6366F1] transition-colors duration-300">
-              Learn more
-              <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="ml-1 w-4 h-4"
-              >
-                <path d="M5 12h14"></path>
-                <path d="m12 5 7 7-7 7"></path>
-              </svg>
-            </div>
-          </div>
-        </div>
-      </a>
+    </div>
+    <div class="mt-12 ml-12 text-center">
+      <h1 id="3x0kzxobllt" class="text-3xl font-bold text-[#d4b8a3] md:text-4xl lg:text-5xl animate-bounce">Simplify Your Life</h1>
+      <p class="mt-4 text-gray-500 md:text-lg">
+        Discover our suite of tools to help you stay organized and on track.
+      </p>
 
     </div>
   </main>
@@ -131,17 +101,4 @@ const handleClick = () =>{
 
 </script>
 <style scoped>
-#title{
-  width: 100%;
-  font: bold 14px Arial;
-  font-family: 'Helvetica Neue Bold', Helvetica, Arial, sans-serif;
-}
-#card:hover { cursor: pointer; background-color: #e8f0fe; }
-.flex-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-
 </style>
